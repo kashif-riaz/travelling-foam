@@ -1,0 +1,151 @@
+ <nav class="bg-white border-gray-200 dark:bg-gray-900 py-2 lg:py-4">
+  <div
+    class="flex items-center justify-start lg:justify-between md:justify-between xl:justify-between mx-auto lg:px-8 md:px-4"
+  >
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <div class="w-8 h-8 bg-[#C4C4C4] rounded-full hidden md:block lg:block xl:block"></div>
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+      ></span>
+    </a>
+    <div class="flex md:order-2 gap-4">
+      <button
+        type="button"
+        data-collapse-toggle="navbar-search"
+        aria-controls="navbar-search"
+        aria-expanded="false"
+        class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1"
+      >
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+          />
+        </svg>
+        <span class="sr-only">Search</span>
+      </button>
+      <div class="relative hidden md:block">
+        <div
+          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+            />
+          </svg>
+          <span class="sr-only">Sarch icon</span>
+        </div>
+        <input
+          type="text"
+          id="search-navbar"
+          class="block w-28 pr-4 py-2 ps-10 text-sm border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Search"
+        />
+      </div>
+      <div class="relative inline-block text-left">
+        <!-- Dropdown Button -->
+<button
+          type="button"
+          class="inline-flex justify-center items-center lg:w-full  px-4 py-2 text-sm"
+          id="dropdown-button"
+          aria-expanded="false"
+          aria-haspopup="true"
+          onclick="toggleDropdown()"
+        >
+          English (united States)
+          <img src="./assets/dropdown.png" alt="" />
+        </button>
+
+
+        <div
+          id="dropdown-menu"
+          class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="dropdown-button"
+          tabindex="-1"
+        >
+          <div class="py-1" role="none">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              >French (France)</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              >Spanish (Mexico)</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              >German (Germany)</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              >Italian (Italy)</a
+            >
+          </div>
+        </div>
+      </div>
+
+
+<script>
+        function toggleDropdown() {
+          const menu = document.getElementById("dropdown-menu");
+          const isVisible = menu.classList.contains("hidden");
+
+          if (isVisible) {
+            menu.classList.remove("hidden");
+          } else {
+            menu.classList.add("hidden");
+          }
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener("click", function (e) {
+          const button = document.getElementById("dropdown-button");
+          const menu = document.getElementById("dropdown-menu");
+
+          if (!button.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+          }
+        });
+      </script>
+
+<button
+        class="bg-black px-5 py-2 text-white lg:text-base text-sm rounded hover:bg-white hover:text-black border-2 border-transparent hover:border-black transition-all ease-in-out"
+      >
+        Sign up
+      </button>
+    </div>
+  </div>
+</nav>
